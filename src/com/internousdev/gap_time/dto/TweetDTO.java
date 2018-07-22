@@ -4,11 +4,12 @@ import java.sql.Date;
 
 public class TweetDTO {
 
-	private int id;
-	private int userId;
-	private String message;
-	private int likeCount;
-	private Date createdAt;
+	private int id;					// ID
+	private int userId;				// ユーザーID
+	private String content;			// 内容
+	private int likeCount;			// いいねの数
+	private Date createdAt;			// 作成日
+	private Date updatedAt;			// 更新日
 
 	private String name;
 
@@ -28,12 +29,12 @@ public class TweetDTO {
 		this.userId = userId;
 	}
 
-	public String getMessage() {
-		return message;
+	public String getContent() {
+		return content;
 	}
 
-	public void setMessage(String message) {
-		this.message = message;
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 	public int getLikeCount() {
@@ -50,6 +51,14 @@ public class TweetDTO {
 
 	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
+	}
+
+	public Date getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
 	}
 
 	public String getName() {

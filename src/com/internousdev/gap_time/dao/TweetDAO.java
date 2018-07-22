@@ -19,7 +19,7 @@ public class TweetDAO {
 
 		Connection connection = DBConnector.getConnection();
 
-		String sql = "INSERT INTO tweets(user_id, message, created_at) VALUES(?,?,now())";
+		String sql = "INSERT INTO tweets(user_id, content, created_at, updated_at) VALUES(?,?,now(),now())";
 
 		boolean result = false;
 
@@ -48,7 +48,7 @@ public class TweetDAO {
 
 		Connection connection = DBConnector.getConnection();
 
-		String sql= "SELECT t.id, t.user_id, t.message, t.like_count, t.created_at, u.name FROM tweets t LEFT JOIN users u ON t.user_id = u.id WHERE t.user_id = ?";
+		String sql= "SELECT t.id, t.user_id, t.content, t.like_count, t.created_at, t.updated_at, u.name FROM tweets t LEFT JOIN users u ON t.user_id = u.id WHERE t.user_id = ?";
 
 		List<TweetDTO> result = new ArrayList<>();
 
@@ -113,10 +113,10 @@ public class TweetDAO {
 		TweetDTO result = new TweetDTO();
 		result.setId(resultSet.getInt("id"));
 		result.setUserId(resultSet.getInt("user_id"));
-		result.setMessage(resultSet.getString("message"));
-		result.setUserId(resultSet.getInt("user_id"));
+		result.setContent(resultSet.getString("content"));
 		result.setLikeCount(resultSet.getInt("like_count"));
 		result.setCreatedAt(resultSet.getDate("created_at"));
+		result.setUpdatedAt(resultSet.getDate("updated_at"));
 		result.setName(resultSet.getString("name"));
 		return result;
 	}
