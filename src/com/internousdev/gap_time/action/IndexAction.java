@@ -1,23 +1,19 @@
 package com.internousdev.gap_time.action;
 
-import java.util.Map;
+import com.internousdev.gap_time.dto.UserDTO;
 
-import org.apache.struts2.interceptor.SessionAware;
+public class IndexAction extends BaseAction {
 
-import com.opensymphony.xwork2.ActionSupport;
-
-public class IndexAction extends ActionSupport implements SessionAware{
-
-	private Map<String, Object> session;
 
 	public String execute(){
 
+		if (session.containsKey("user")){
+			UserDTO user = (UserDTO)session.get("user");
+			if (user.getLogined() == 1){
+				return "success";
+			}
+		}
+
 		return "login";
 	}
-
-	@Override
-	public void setSession(Map<String, Object> session){
-		this.session = session;
-	}
-
 }

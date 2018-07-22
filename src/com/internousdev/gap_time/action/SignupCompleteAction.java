@@ -5,7 +5,9 @@ import java.util.Map;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.gap_time.dao.SignupDAO;
+import com.internousdev.gap_time.dao.UserDAO;
 import com.internousdev.gap_time.dto.SignupDTO;
+import com.internousdev.gap_time.dto.UserDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class SignupCompleteAction extends ActionSupport implements SessionAware{
@@ -14,13 +16,22 @@ public class SignupCompleteAction extends ActionSupport implements SessionAware{
 
 	public String execute(){
 
-		SignupDAO dao = new SignupDAO();
-		SignupDTO dto = (SignupDTO)session.get("signupDto");
+		SignupDAO signUpDao = new SignupDAO();
+		SignupDTO signUpDto = (SignupDTO)session.get("signupDto");
 
-		if (dao.insert(dto)){
+		if (signUpDao.insert(signUpDto)){
 
+			UserDAO userDao = new UserDAO();
+
+			String loginId = signUpDto.getLoginId();
+			String password = signUpDto.getPassword();
+
+			if (userDao.login(loginId, password)){
+				UserDTO user = userDao.select(loginId, password);
+				session.put("user", user);
+
+			}
 		}
-
 
 		session.remove("signupDto");
 
