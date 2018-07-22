@@ -41,7 +41,7 @@
 			<result name="success">home.jsp</result>
 		</action>
 
-		<action name="TweetAction" class="com.internousdev.twitter_demo.action.TweetAction" method="execute">
+		<action name="TweetAction" class="com.internousdev.gap_time.action.TweetAction" method="execute">
 			<result name="success">home.jsp</result>
 		</action>
 
