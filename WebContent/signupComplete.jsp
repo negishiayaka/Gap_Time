@@ -4,10 +4,13 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta http-equiv="refresh" content="0 ;URL='IndexAction'" />
-		<title>Gap_Time</title>
+		<title>新規登録完了画面</title>
 	</head>
 	<body>
-
+		<h1>新規登録完了</h1>
+		<br>
+		<a href="HomeAction">
+			ホームへ
+		</a>
 	</body>
 </html>
