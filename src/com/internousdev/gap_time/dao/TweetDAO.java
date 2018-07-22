@@ -78,12 +78,44 @@ public class TweetDAO {
 		return result;
 	}
 
+	/*
+	 * いいね+1
+	 */
+	public boolean like(int id) {
+
+		Connection connection = DBConnector.getConnection();
+
+		String sql = "UPDATE tweets SET like_count = like_count + 1 WHERE id = ?";
+
+		boolean result = false;
+
+		try{
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, id);
+
+			System.out.println(preparedStatement.toString());
+			result = preparedStatement.executeUpdate() > 0;
+
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+
+		try{
+			connection.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+
+		return result;
+	}
+
 	public TweetDTO toDto(ResultSet resultSet) throws SQLException {
 		TweetDTO result = new TweetDTO();
 		result.setId(resultSet.getInt("id"));
 		result.setUserId(resultSet.getInt("user_id"));
 		result.setMessage(resultSet.getString("message"));
 		result.setUserId(resultSet.getInt("user_id"));
+		result.setLikeCount(resultSet.getInt("like_count"));
 		result.setCreatedAt(resultSet.getDate("created_at"));
 		result.setName(resultSet.getString("name"));
 		return result;
