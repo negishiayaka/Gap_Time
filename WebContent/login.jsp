@@ -1,12 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/login.css">
+
+<title>ログイン画面</title>
 </head>
 <body>
+	<h1>ログイン</h1>
+	<s:form action="LoginAction">
+		<ul>
+			<!-- ログインID入力フィールド -->
+			<li><s:textfield name="loginId" placeholder="ID" /><br></li>
+			<!-- パスワード入力フィールド -->
+			<li><s:password name="password" placeholder="PASSWORD" /><br>
+			</li>
+			<!-- ログインのエラー -->
+			<s:if test="%{#session.error.containsKey('login')}">
+				<s:iterator value="%{#session.error.login}">
+					<li><s:property /></li>
+				</s:iterator>
+			</s:if>
+			<!-- サブミットボタン -->
+			<li><s:submit value="ログイン" /></li>
+		</ul>
+	</s:form>
+	<!-- 新規登録へのリンク -->
+	<a href="SignupAction"> 新規登録 </a>
 
 </body>
 </html>
