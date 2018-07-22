@@ -11,6 +11,8 @@ public class HomeAction extends BaseAction {
 
 		session.put("profile", user);
 
+		TweetUtil.select(user.getId(), session);
+
 		return "success";
 	}
 }
