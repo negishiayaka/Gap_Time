@@ -28,7 +28,7 @@ insert into users values
 create table tweets(
 	id int primary key not null auto_increment comment "ID",
 	user_id int not null comment "ユーザーID",
-	message varchar(140) not null comment "メッセージ",
+	content varchar(140) not null comment "内容",
 	like_count int not null default 0 comment "いいねの数",
 	created_at datetime not null comment "作成日",
 	updated_at datetime not null comment "更新日",
@@ -36,12 +36,12 @@ create table tweets(
 );
 
 insert into tweets values
-(1, 2, "message1", 0, now(), now()),
-(2, 2, "message2", 0, now(), now()),
-(3, 3, "message3", 0, now(), now()),
-(4, 3, "message4", 0, now(), now()),
-(5, 4, "message5", 0, now(), now()),
-(6, 4, "message6", 0, now(), now());
+(1, 2, "content1", 0, now(), now()),
+(2, 2, "content2", 0, now(), now()),
+(3, 3, "content3", 0, now(), now()),
+(4, 3, "content4", 0, now(), now()),
+(5, 4, "content5", 0, now(), now()),
+(6, 4, "content6", 0, now(), now());
 
 -- フォロー
 create table follows(
