@@ -18,4 +18,25 @@ create table users(
 	updated_at datetime not null comment "更新日"
 );
 
-insert into users values(1, "guest", "guest", "guest", "introductions", 0, now(), now());
+insert into users values
+(1, "a", "a", "aaa", "introductions", 0, now(), now()),
+(2, "b", "b", "bbb", "introductions", 0, now(), now()),
+(3, "c", "c", "ccc", "introductions", 0, now(), now());
+
+-- ツイート
+create table tweets(
+	id int primary key not null auto_increment comment "ID",
+	user_id int not null comment "ユーザーID",
+	message varchar(140) not null comment "メッセージ",
+	like_count int not null default 0 comment "いいねの数",
+	created_at datetime not null comment "作成日",
+	foreign key(user_id) references users(id)
+);
+
+insert into tweets values
+(1, 1, "message1", 0, now()),
+(2, 1, "message2", 0, now()),
+(3, 2, "message3", 0, now()),
+(4, 2, "message4", 0, now()),
+(5, 3, "message5", 0, now()),
+(6, 3, "message6", 0, now());
