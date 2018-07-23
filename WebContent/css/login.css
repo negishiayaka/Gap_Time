@@ -20,10 +20,7 @@ body {
 	font-size: 35px;
 	padding: 30px;
 }
-/*アカウント作成　文字*/
-p {
-	text-align: center;
-}
+
 
 li {
 	list-style: none;
@@ -88,5 +85,9 @@ li {
 	width: 200px;
 	height: 40px;
 	margin-top: 60px;
-	/* margin-top: 150px; */
+}
+/*アカウント作成　文字*/
+p {
+	text-align: center;
+	margin-top: 10px;
 }

@@ -7,6 +7,6 @@
 		<title>Gap_Time</title>
 	</head>
 	<body>
-
+		<a href="LogoutAction">ログアウト</a>
 	</body>
 </html>
