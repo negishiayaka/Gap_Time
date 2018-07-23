@@ -8,5 +8,12 @@
 	</head>
 	<body>
 
+		Home
+
+		<jsp:include page="header.jsp" />
+		<jsp:include page="profile.jsp" />
+		<jsp:include page="tweetField.jsp" />
+		<jsp:include page="tweetView.jsp" />
+
 	</body>
 </html>
