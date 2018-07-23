@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/login.css">
 
-<title>ログイン画面</title>
+<title>Gap_Time</title>
 </head>
 <body>
 
