@@ -1,35 +1,42 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>新規登録確認画面</title>
-	</head>
-	<body>
-		<h1>登録内容の確認</h1>
-		<ul>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/signupConfirm.css">
+<title>Gap_Time</title>
+</head>
+<body>
+	<div class="confirmbox">
+		<div class="confirmboxtext">こちらの内容でよろしいですか？</div>
+		<ul class="confirmbox2">
+
 			<li>
-				<p>ログインID</p>
+				<div class="confirmtitle"><p>ログインID</p></div>
 			</li>
-			<li>
-				<s:property value="%{#session.signupDto.loginId}" />
-			</li>
-			<li>
-				<p>パスワード</p>
-			</li>
-			<li>
-				<s:property value="%{#session.signupDto.password}" />
-			</li>
-			<li>
-				<p>表示名</p>
-			</li>
-			<li>
-				<s:property value="%{#session.signupDto.name}" />
-			</li>
+			<li><div class="confirmname">
+					<s:property value="%{#session.signupDto.loginId}" />
+				</div></li>
+
+			<li><div class="confirmtitle"><p>パスワード</p></div></li>
+			<li><div class="confirmname">
+					<s:property value="%{#session.signupDto.password}" />
+				</div></li>
+			<li><div class="confirmtitle"><p>表示名</p></div></li>
+			<li><div class="confirmname">
+					<s:property value="%{#session.signupDto.name}" />
+				</div></li>
 		</ul>
-		<a href="SignupCompleteAction">
-			登録
-		</a>
-	</body>
+
+		<s:form action="SignupCompleteAction">
+			<div class="btn_all">
+				<s:submit value="登録する" class="submit_btn" />
+			</div>
+		</s:form>
+	</div>
+</body>
 </html>
