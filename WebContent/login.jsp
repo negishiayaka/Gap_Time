@@ -12,13 +12,14 @@
 <title>ログイン画面</title>
 </head>
 <body>
-	<h1>ログイン</h1>
+
 	<s:form action="LoginAction">
-		<ul>
+		<ul class="fieldbox">
+		<li><div class="fieldboxtext">LOGIN</div></li>
 			<!-- ログインID入力フィールド -->
-			<li><s:textfield name="loginId" placeholder="ID" /><br></li>
+			<li><div class="fieldbox2"><s:textfield class="logintextfield" name="loginId" placeholder="ID" /></div></li>
 			<!-- パスワード入力フィールド -->
-			<li><s:password name="password" placeholder="PASSWORD" /><br>
+			<li><div class="fieldbox3"><s:password class="logintextfield" name="password" placeholder="PASSWORD" /></div>
 			</li>
 			<!-- ログインのエラー -->
 			<s:if test="%{#session.error.containsKey('login')}">
@@ -27,11 +28,13 @@
 				</s:iterator>
 			</s:if>
 			<!-- サブミットボタン -->
-			<li><s:submit value="ログイン" /></li>
+
+			<li><div class="btn_all"><s:submit value="Sign In" class="submit_btn"/></div></li>
+
 		</ul>
 	</s:form>
 	<!-- 新規登録へのリンク -->
-	<a href="SignupAction"> 新規登録 </a>
+	<p><a href="SignupAction">新規登録</a></p>
 
 </body>
 </html>
