@@ -1,0 +1,29 @@
+/*全体のサイズ*/
+.menu {
+	width: 800px;
+	height: 100px;
+	margin: 0 auto;
+}
+/*ヘッダー左側*/
+.left {
+	float: left;
+}
+/*ヘッダー右側*/
+.right {
+	float: right;
+}
+/*メニューの中*/
+.menu li{
+	float: left;
+	list-style: none;
+	margin: 10px;
+}
+/*floatの解除*/
+.clear {
+	clear: both;
+}
+/*検索ボックス*/
+.searchstyle {
+	border: 1px solid #000;
+}
+
