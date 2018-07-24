@@ -6,14 +6,13 @@ body {
 	font-family: 'メイリオ', sans-serif;
 }
 
-
 li {
 	list-style: none;
 }
 
 /*フォームレイアウト*/
 .confirmbox {
-	height: 400px;
+	height: 430px;
 	width: 400px;
 	background: #fafafa;
 	margin: 0 auto;
@@ -21,8 +20,8 @@ li {
 }
 
 /*文字*/
-/*ログイン　文字*/
-.confirmbox .confirmboxtext {
+/*ログイン文字*/
+.confirmboxtext {
 	text-align: center;
 	font-size: 20px;
 	padding: 30px;
@@ -30,7 +29,7 @@ li {
 /*確認内容ボックス*/
 .confirmbox2{
 	width:250px;
-	height: 200px;
+	height: 230px;
 	background-color: #fff;
 	margin: 0 auto;
 	border-radius: 5px;
@@ -63,22 +62,24 @@ li {
 	height: 40px;
 	margin-top: 30px;
 }
+/*確認項目*/
 .confirmtitle{
-	padding-top:10px;
+	padding-top:18px;
 	text-align:center;
-	color: #424242;
+	color: #5e5e5e;
 	font-weight:bold;
 
 }
+/*確認項目のボーダー*/
 p{
 	border-bottom:1px solid #d0a9f5;
 	width: 130px;
 	margin: 0 auto;
 
 }
-
+/*登録内容*/
 .confirmname{
-	color: #5e5e5e;
+	color: #424242;
 	font-size: 20px;
 	text-align: center;
 }

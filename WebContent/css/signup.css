@@ -9,7 +9,7 @@ body {
 /*フォームレイアウト*/
 .fieldbox {
 	height: 480px;
-	width: 300px;
+	width: 350px;
 	background: #fafafa;
 	margin: 0 auto;
 	padding: 0;
@@ -19,15 +19,15 @@ li {
 }
 
 /*文字*/
-/*ログイン　文字*/
-.fieldbox .fieldboxtext {
+/*ログイン文字*/
+.fieldboxtext {
 	text-align: center;
 	font-size: 25px;
 	padding: 30px;
 }
 
 .signuptextfield{
-	width: 200px;
+	width: 230px;
 	height: 50px;
 	background: #fafafa;
 	border: none;
@@ -44,7 +44,7 @@ li {
 
 /*入力欄*/
 .idtextfield {
-	width: 200px;
+	width: 230px;
 	height: 50px;
 	margin: 0 auto;
 	font-size: 20px;
@@ -52,7 +52,7 @@ li {
 }
 /*PW入力欄*/
 .passwordtextfield{
-	width: 200px;
+	width: 230px;
 	height: 50px;
 	margin: 0 auto;
 	font-size: 20px;
@@ -60,7 +60,7 @@ li {
 }
 /*アカウント入力欄*/
 .accounttextfield{
-	width: 200px;
+	width: 230px;
 	height: 50px;
 	margin: 0 auto;
 	font-size: 20px;
