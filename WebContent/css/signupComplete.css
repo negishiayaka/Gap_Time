@@ -7,7 +7,7 @@ body {
 }
 /*フォームレイアウト*/
 .fieldbox {
-	height: 250px;
+	height: 200px;
 	width: 400px;
 	background: #fafafa;
 	margin: 0 auto;
