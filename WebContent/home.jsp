@@ -9,7 +9,6 @@
         <title>Gap_Time</title>
     </head>
     <body>
-        Home
         <jsp:include page="header.jsp" />
         <jsp:include page="profile.jsp" />
         <jsp:include page="tweetField.jsp" />

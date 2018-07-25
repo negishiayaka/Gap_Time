@@ -16,14 +16,17 @@
 	</ul>
 	<ul class="right">
 		<li>
-			<s:form action="SearchUserAction">
+
 				<s:textfield class="searchstyle" name="search" />
-				<s:submit value="検索" />
+				</li>
+				<li>
+				<s:form action="SearchUserAction">
+				<s:submit class="search_btn" type="image" src="images/search.png"/>
 			</s:form>
 			<!-- <a href="#">検索</a> -->
 
 		</li>
-		<li>
+		<li class="signout">
 			<a href="LogoutAction">Sign out</a>
 		</li>
 	</ul>

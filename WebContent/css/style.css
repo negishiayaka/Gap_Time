@@ -1,5 +1,12 @@
 @CHARSET "UTF-8";
 
+body {
+	font-family: "メイリオ", sans-serif;
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	background: #F2F2F2;
+}
 /*リセットCSS*/
 * {
 	margin: 0;
