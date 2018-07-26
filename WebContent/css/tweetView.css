@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+
+.box{
+
+	background-color: red;
+	width: 300px;
+}
+
+.box2{
+	background-color: green;
+	width: 300px;
+}
+.box3{
+	background-color: blue;
+	width: 300px;
+}
