@@ -39,7 +39,7 @@ ul {
 	border-radius: 100%;
 }
 /*アカウント中央へ*/
-.account{
+.account_all{
 	text-align: center;
 	margin-top: 10px;
 }
@@ -61,3 +61,15 @@ ul {
 	color: #2E2E2E;
 	font-size: 20px;
 }
+/*自己紹介ボックス中央へ*/
+.introductions_all{
+	text-align: center;
+	margin-top: 10px;
+	width: 230px;
+	height: 100px;
+	background-color: #E6E6E6;
+	margin: 0 auto;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
