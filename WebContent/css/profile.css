@@ -1,6 +1,63 @@
 @CHARSET "UTF-8";
 
-ul{
+ul {
 	list-style: none;
 }
+/*H1デザイン*/
+.profile_name {
+	position: relative;
+	display: inline-block;
+	padding: 0 2.5em;
+	text-align: center;
+	color: #585858;
+	margin-top: 10px;
+	font-size: 20px;
+	margin-left: 40px;
+}
+.profile_name:before, .profile_name:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	width: 20%;
+	height: 2px;
+	background-color: #9F81F7;
+}
+.profile_name:before {
+	left: 0;
+}
+.profile_name:after {
+	right: 0;
+}
 
+/*プロフィール画像*/
+.profile_img  img {
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-radius: 100%;
+}
+/*アカウント中央へ*/
+.account{
+	text-align: center;
+	margin-top: 10px;
+}
+/*アカウントタイトル*/
+.account_title{
+	font-size: 15px;
+	color: #848484;
+	font-weight:bold;
+}
+/*アカウントライン*/
+.account_line{
+	border-bottom: 2px solid #9F81F7;
+	width: 130px;
+	margin: 0 auto;
+}
+/*アカウント名*/
+.account_name{
+	font-weight:bold;
+	color: #2E2E2E;
+	font-size: 20px;
+}
