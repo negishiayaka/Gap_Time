@@ -20,7 +20,7 @@ create table users(
 
 insert into users values
 (1, "guest", "guest", "ゲスト", "紹介文", 0, now(), now()),
-(2, "a", "a", "aaa", "introductions", 0, now(), now()),
+(2, "a", "a", "aaa", "とら/ポメラニアン /男の子/2016年5月25日生まれ/2歳/4.6キロ/人が大好き！/東京住み/ペット介護士取得/とらの日時をつぶやきます！/東京で定期的にポメ会開催中！", 0, now(), now()),
 (3, "b", "b", "bbb", "introductions", 0, now(), now()),
 (4, "c", "c", "ccc", "introductions", 0, now(), now());
 
