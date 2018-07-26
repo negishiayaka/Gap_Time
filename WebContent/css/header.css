@@ -1,9 +1,28 @@
 /*全体のサイズ*/
-.menu {
-	width: 1000px;
+body{
+	background-color: #F2EFFB;
+}
+/*メニューの余り幅ライン*/
+.menu_line{
+	width: 100%;
 	height: 50px;
 	margin: 0 auto;
-	background-color: #ECE0F8;
+	background-color: #fff;
+	border-bottom: 2px solid #bdbdbd;
+	}
+
+/*header背景*/
+.menu_all{
+	width: 100%;
+	height: 50px;
+	background-color: #fff;
+}
+/*メニュー固定*/
+.menu {
+	width: 800px;
+	height: 50px;
+	margin: 0 auto;
+	background-color: #fff;
 }
 /*ヘッダー左側*/
 .left {
@@ -12,15 +31,15 @@
 }
 /*左メニューアイコン*/
 .left a {
-	border-bottom: 2px solid #fff;
+	border-bottom: 2px solid #9F81F7;/*下線*/
 	display: block;
-	color: white;
+	color: #585858;/*文字*/
 	text-align: center;
 	padding: 3px 30px;
 	text-decoration: none;
 	font-weight: bold;
 }
-/*メニューフォバー時*/
+/*メニューhover時*/
 li a:hover:not(.active) {
 background-color: #E3CEF6;
 }
@@ -29,11 +48,11 @@ background-color: #E3CEF6;
 	float: right;
 	overflow: hidden;
 }
-/*ログアウト文字*/
+/*ログアウト下線*/
 .signout a{
-border-bottom: 2px solid #fff;
+border-bottom: 2px solid #9F81F7;
 	display: block;
-	color: white;
+	color: #585858;
 	text-align: center;
 	padding: 3px 30px;
 	text-decoration: none;
@@ -60,16 +79,22 @@ background-color: #E3CEF6;
 }
 /*検索ボックス*/
 .searchstyle {
-	width:170px;
+	width:200px;
 	height:30px;
 	border: 1px solid #9F81F7;
 	border-radius: 20px;
 	margin-top: 1px;
 	margin-right:-15px;
-	font-size: 20px;
+	font-size: 18px;
 	color: #585858;
+	text-align: center;
 }
-
+/*検索ボックスの中身*/
+.searchstyle::-webkit-input-placeholder {
+    color: #bdbdbd;
+    font-size: 18px;
+    }
+/*検索ボタン*/
 .right .search_btn{
 	width: 18px;
 	height: 18px;
