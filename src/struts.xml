@@ -49,5 +49,26 @@
 			<result name="success">home.jsp</result>
 		</action>
 
+		<action name="SearchUserAction" class="com.internousdev.gap_time.action.SearchUserAction" method="execute">
+			<result name="success">searchUser.jsp</result>
+		</action>
+
+		<action name="GoProfileEditAction" class="com.internousdev.gap_time.action.GoProfileEditAction" method="execute">
+			<result name="success">profileEdit.jsp</result>
+		</action>
+
+		<action name="ProfileEditAction" class="com.internousdev.gap_time.action.ProfileEditAction" method="execute">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">2097152</param>
+				<param name="allowedTypes">image/png,image/gif,image/jpeg,image/pjpeg</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success">profileEditComplete.jsp</result>
+		</action>
+
+		<action name="FollowViewAction" class="com.internousdev.gap_time.action.FollowViewAction" method="execute">
+			<result name="success">followView.jsp</result>
+		</action>
+
 	</package>
 </struts>

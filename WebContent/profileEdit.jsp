@@ -8,7 +8,7 @@
     </head>
     <body>
         <jsp:include page="header.jsp"/>
-        <s:form action="ProfileEdit">
+        <s:form action="ProfileEditAction">
             <s:file name="photo" /><br>
             <s:textfield name="name" /><br>
             <s:textarea name="introductions" /><br>

@@ -10,18 +10,14 @@ public class LoginAction extends BaseAction {
 
 	public String execute(){
 
-		System.out.println("login");
-		System.out.println(loginId);
-		System.out.println(password);
-
 		clearError();
 
 		if (loginId.equals("")){
-			putError("loginId", "入力してください");
+			putError("loginId", "IDを入力してください");
 		}
 
 		if (password.equals("")){
-			putError("password", "入力してください");
+			putError("password", "パスワードを入力してください");
 		}
 
 		UserDAO dao = new UserDAO();

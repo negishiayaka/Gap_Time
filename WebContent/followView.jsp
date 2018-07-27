@@ -10,10 +10,10 @@
 
 		<jsp:include page="header.jsp" />
 
-		ユーザー検索結果
+		フォロー一覧
 
 		<ul>
-			<s:iterator value="#session.search">
+			<s:iterator value="#session.follows">
 				<li>
 					<a href=
 						"<s:url action='HomeAction'>
@@ -21,6 +21,17 @@
 						</s:url>">
 
 						<s:property value="name" />
+
+					</a>
+
+					&nbsp;<!-- スペース -->
+
+					<a href=
+						"<s:url action='DefollowAction'>
+							<s:param name='userId' value='id' />
+						</s:url>">
+
+						フォロー解除
 
 					</a>
 				</li>

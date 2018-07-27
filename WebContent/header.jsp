@@ -12,11 +12,11 @@
 				<li><a href="#">Follow</a></li>
 			</ul>
 			<ul class="right">
-				<s:form action="SearchUserAction">
-					<li><s:textfield class="searchstyle" name="keyword"
-							placeholder="Search" /></li>
-					<li><s:submit class="search_btn" type="image" src="images/search.png" /></li>
-				</s:form>
+				<li><s:textfield class="searchstyle" name="search"
+						placeholder="Search" /></li>
+				<li><s:form action="SearchUserAction">
+						<s:submit class="search_btn" type="image" src="images/search.png" />
+					</s:form> <!-- <a href="#">検索</a> --></li>
 				<li class="signout"><a href="LogoutAction">Sign out</a></li>
 			</ul>
 		</div>

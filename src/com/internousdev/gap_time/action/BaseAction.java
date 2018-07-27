@@ -63,6 +63,10 @@ public class BaseAction  extends ActionSupport implements SessionAware {
 		}
 	}
 
+	public Map<String, List<String>> getError(){
+		return error;
+	}
+
 	@Override
 	public void setSession(Map<String, Object> session){
 		this.session = session;
