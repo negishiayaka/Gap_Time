@@ -13,10 +13,10 @@
 			</ul>
 			<ul class="right">
 				<s:form action="SearchUserAction">
-+					<li><s:textfield class="searchstyle" name="keyword"
-+							placeholder="Search" /></li>
-+					<li><s:submit class="search_btn" type="image" src="images/search.png" /></li>
-+				</s:form>
+					<li><s:textfield class="searchstyle" name="keyword"
+							placeholder="Search" /></li>
+					<li><s:submit class="search_btn" type="image" src="images/search.png" /></li>
+				</s:form>
 				<li class="signout"><a href="LogoutAction">Sign out</a></li>
 			</ul>
 		</div>
