@@ -1,8 +1,8 @@
-/*蜈ｨ菴薙�ｮ繧ｵ繧､繧ｺ*/
+/*全体のサイズ*/
 body{
 	background-color: #F2EFFB;
 }
-/*繝｡繝九Η繝ｼ縺ｮ菴吶ｊ蟷�繝ｩ繧､繝ｳ*/
+/*メニューの余り幅ライン*/
 .menu_line{
 	width: 100%;
 	height: 50px;
@@ -11,48 +11,44 @@ body{
 	border-bottom: 2px solid #bdbdbd;
 	}
 
-/*header閭梧勹*/
+/*header背景*/
 .menu_all{
 	width: 100%;
 	height: 50px;
 	background-color: #fff;
 }
-/*繝｡繝九Η繝ｼ蝗ｺ螳�*/
+/*メニュー固定*/
 .menu {
 	width: 800px;
 	height: 50px;
 	margin: 0 auto;
 	background-color: #fff;
 }
-
-.menu {
-	line-height: 50px;
-}
-/*繝倥ャ繝�繝ｼ蟾ｦ蛛ｴ*/
+/*ヘッダー左側*/
 .left {
 	float: left;
 	overflow: hidden;
 }
-/*蟾ｦ繝｡繝九Η繝ｼ繧｢繧､繧ｳ繝ｳ*/
+/*左メニューアイコン*/
 .left a {
-	border-bottom: 2px solid #9F81F7;/*荳狗ｷ�*/
+	border-bottom: 2px solid #9F81F7;/*下線*/
 	display: block;
-	color: #585858;/*譁�蟄�*/
+	color: #585858;/*文字*/
 	text-align: center;
 	padding: 3px 30px;
 	text-decoration: none;
 	font-weight: bold;
 }
-/*繝｡繝九Η繝ｼhover譎�*/
+/*メニューhover時*/
 li a:hover:not(.active) {
 background-color: #E3CEF6;
 }
-/*繝ｭ繧ｰ繧｢繧ｦ繝医�懊ち繝ｳ蛛ｴ*/
+/*ログアウトボタン側*/
 .signout{
 	float: right;
 	overflow: hidden;
 }
-/*繝ｭ繧ｰ繧｢繧ｦ繝井ｸ狗ｷ�*/
+/*ログアウト下線*/
 .signout a{
 border-bottom: 2px solid #9F81F7;
 	display: block;
@@ -62,27 +58,31 @@ border-bottom: 2px solid #9F81F7;
 	text-decoration: none;
 	font-weight: bold;
 }
-/*繝ｭ繧ｰ繧｢繧ｦ繝医ヵ繧ｩ繝舌�ｼ譎�*/
+/*ログアウトフォバー時*/
 .signout li a:hover:not(.active) {
 background-color: #E3CEF6;
 }
 
-/*繝倥ャ繝�繝ｼ蜿ｳ蛛ｴ*/
+/*ヘッダー右側*/
 .right {
 	float: right;
 }
-/*繝｡繝九Η繝ｼ縺ｮ荳ｭ*/
+/*後日修正*/
+.right ul{
+	width: 367px;
+}
+
+/*メニューの中*/
 .menu li {
 	float: left;
 	list-style: none;
 	margin: 8px;
-	line-height: 50px;
 }
-/*float縺ｮ隗｣髯､*/
+/*floatの解除*/
 .clear {
 	clear: both;
 }
-/*讀懃ｴ｢繝懊ャ繧ｯ繧ｹ*/
+/*検索ボックス*/
 .searchstyle {
 	width:200px;
 	height:30px;
@@ -94,12 +94,12 @@ background-color: #E3CEF6;
 	color: #585858;
 	text-align: center;
 }
-/*讀懃ｴ｢繝懊ャ繧ｯ繧ｹ縺ｮ荳ｭ霄ｫ*/
+/*検索ボックスの中身*/
 .searchstyle::-webkit-input-placeholder {
     color: #bdbdbd;
     font-size: 18px;
     }
-/*讀懃ｴ｢繝懊ち繝ｳ*/
+/*検索ボタン*/
 .right .search_btn{
 	width: 18px;
 	height: 18px;
