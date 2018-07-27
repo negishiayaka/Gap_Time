@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="./css/header.css">
 <link rel="stylesheet" href="./css/profile.css">
 <link rel="stylesheet" href="./css/tweetView.css">
+<link rel="stylesheet" href="./css/tweetField.css">
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Gap_Time</title>
 
@@ -22,7 +24,7 @@
 	#profile {
 		float: left;
 		width: 250px;
-		height: 1000px;
+		height: 530px;
 		background-color: #fff;
 		margin-top: 20px;
 	}

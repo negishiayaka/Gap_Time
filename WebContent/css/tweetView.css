@@ -1,16 +1,41 @@
 @CHARSET "UTF-8";
 
-.box{
+/*H1デザイン*/
+.content_name {
+	position: relative;
+	display: inline-block;
+	padding: 0 2.5em;
+	text-align: center;
+	color: #585858;
+	margin-top: 20px;
+	font-size: 20px;
+	margin-left: 130px;
+}
+.content_name:before, .content_name:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	width: 13%;
+	height: 2px;
+	background-color: #9F81F7;
+}
+.content_name:before {
+	left: 0;
+}
+.content_name:after {
+	right: 0;
+}
 
+/*contentsベースボックス*/
+.content_box{
 	background-color: red;
-	width: 300px;
+	width: 450px;
+	margin: 0 auto;
+	margin-top: 20px;
 }
 
-.box2{
+.content_small_box{
 	background-color: green;
-	width: 300px;
-}
-.box3{
-	background-color: blue;
 	width: 300px;
 }

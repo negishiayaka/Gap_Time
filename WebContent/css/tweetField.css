@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+/*ツイート入力ボックス*/
+.tweet_box {
+	width: 440px;
+	height: 50px;
+	border: 1px solid #9F81F7;
+	margin-top: 20px;
+	margin-left:15px;
+	border-radius: 5px;
+	font-size: 18px;
+}
+/*ツイート入力ボックスの中*/
+.tweet_box::-webkit-input-placeholder {
+	color: #bdbdbd;
+	font-size: 18px;
+}
+/*ボタン*/
+.tweet_btn {
+	width: 55px;
+	height: 54px;
+	background-color: #9F81F7;
+	border-radius: 5px;
+	margin-top: 10px;
+	font-size: 18px;
+}

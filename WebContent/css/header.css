@@ -65,7 +65,7 @@ background-color: #E3CEF6;
 
 /*ヘッダー右側*/
 .right {
-	float: right;
+/* 	float: right; */
 }
 /*メニューの中*/
 .menu li {
