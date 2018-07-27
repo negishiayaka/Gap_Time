@@ -58,10 +58,7 @@
 
 	</div>
 
-<s:form action="SearchUserAction">
-    <s:textfield name="keyword" placeholder="キーワード" />
-    <s:submit value="検索" />
-</s:form>
+
 
 
 </body>

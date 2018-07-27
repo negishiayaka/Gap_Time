@@ -10,9 +10,9 @@
         <jsp:include page="header.jsp"/>
         <s:form action="ProfileEditAction">
             <s:file name="photo" /><br>
-            <s:textfield name="name" /><br>
-            <s:textarea name="introductions" /><br>
-            <s:submit value="更新" /><br>
+			<s:textfield name="name" value="%{#session.user.name}"/><br>
+			<s:textarea name="introductions" value="%{#session.user.introductions}"/><br>
+			<s:submit value="更新" /><br>
         </s:form>
     </body>
 </html>

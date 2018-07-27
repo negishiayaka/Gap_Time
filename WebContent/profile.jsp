@@ -8,7 +8,7 @@
 		<li><img src="images/tora.jpg"></li>
 	</ul>
 	<ul class="account_all">
-		<li class="account_title">アカウント名</li>
+		<li class="account_title">Name</li>
 		<li class="account_line"></li>
 		<li class="account_name"><s:property
 				value="%{#session.profile.name}" /></li>
@@ -34,5 +34,7 @@
 		<li class="introductions"><br>
 		<s:property value="%{#session.profile.introductions}" /></li>
 	</ul>
+
+	<a href="GoProfileEditAction">プロフィール編集</a>
 
 </div>

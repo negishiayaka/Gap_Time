@@ -10,6 +10,7 @@
 	margin-top: 20px;
 	font-size: 20px;
 	margin-left: 130px;
+	margin-bottom: 10px;
 }
 .content_name:before, .content_name:after {
 	content: '';
@@ -36,13 +37,39 @@
 	padding-top: 10px;
 
 }
-/*ホワイトボックス*/
+/*ボックス*/
 .content_small_box{
 	width: 420px;
 	margin: 0 auto;
 }
-
-.aa{
+/*ツイート一覧*/
+.content_field{
 	background-color: #fff;
 	margin-bottom: 10px;
+	border: 1px solid #585858;
+	height:120px;
+}
+
+/*アカウント名*/
+.name_box{
+	text-align: center;
+	border-bottom: 1px solid #9F81F7;
+}
+/*ツイート表示欄*/
+.content_box{
+	width: 300px;
+	height: 70px;
+	margin: 0 auto;
+}
+/*いいね画像*/
+.like_btn img{
+	width:20px;
+	height:16px;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+/*いいねボックス*/
+.like_btn{
+	width: 60px;
+	height: 25px;
 }
