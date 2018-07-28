@@ -13,9 +13,9 @@
 </head>
 <body>
 	<div class="fieldbox">
-		<h1>登録が完了しました！</h1>
+		<h1>Completed</h1>
 
-		<br> <p><a href="HomeAction"> 早速つぶやいてみよう！ </a></p>
+		<br> <p><a href="HomeAction"> Let's Tweet！ </a></p>
 	</div>
 </body>
 </html>

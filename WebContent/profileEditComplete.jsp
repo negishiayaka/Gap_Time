@@ -1,15 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>twitter demo</title>
-	</head>
-	<body>
+<head>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/profileEditComplete.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Gap_Time</title>
+</head>
+<body>
 
-		<jsp:include page="header.jsp" />
-		編集完了
+	<jsp:include page="header.jsp" />
+	<div class="fieldbox">
+		<h1>Completed</h1>
+		<br> <p><a href="HomeAction"> Go Home </a></p>
+	</div>
 
-	</body>
+</body>
 </html>
