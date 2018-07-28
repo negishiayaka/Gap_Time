@@ -4,6 +4,7 @@ import java.io.File;
 
 import com.internousdev.gap_time.dao.UserDAO;
 import com.internousdev.gap_time.dto.UserDTO;
+import com.internousdev.gap_time.util.UserUtil;
 
 public class ProfileEditAction extends BaseAction {
 
@@ -16,41 +17,51 @@ public class ProfileEditAction extends BaseAction {
 	private String introductions;
 
 
-	public String execute(){
+	public String execute() throws Exception {
+
+		System.out.println("");
+		System.out.println("ProfileEdit");
+		System.out.println(name);
+		System.out.println(introductions);
+		System.out.println(photo);
+		System.out.println(photoContentType);
+		System.out.println(photoFileName);
 
 		UserDTO user = (UserDTO)session.get("user");
 
 		UserDAO dao = new UserDAO();
 
-		/*if (photoFileName != null && photoContentType.equals("image/png")) {
-			String filePath = ServletActionContext.getServletContext().getRealPath("/").concat("images");
-			System.out.println("Image Location:" + filePath);
-			File fileToCreate = new File(filePath, "profile.png");
+		if (name.length() == 0) {
+			putError("name", "1文字以上で入力してください");
+		}
 
-			try {
-				FileUtils.copyFile(photo, fileToCreate);
-				session.put("image_file_name", photoFileName);
-				session.put("image_file_path", "images/");
-			} catch (IOException e) {
-				e.printStackTrace();
+		if (introductions.length() == 0) {
+			putError("introductions", "1文字以上で入力してください");
+		}
+
+		if (photo != null && !photoContentType.equals("image/png")) {
+			putError("photo", "pngファイルを選択してください");
+		}
+
+		if (!isError()) {
+
+			if (photo != null) {
+				UserUtil.uploadPhoto(user.getId(), photo);
 			}
-		}*/
 
+			// データベース更新
+			if (dao.update(user.getId(), name, introductions)) {
 
-
-		if (dao.update(user.getId(), name, introductions)) {
-
-			System.out.println("success");
-
-			user = dao.select(user.getLoginId(), user.getPassword());
-			session.put("user", user);
+				user = dao.select(user.getLoginId(), user.getPassword());
+				session.put("user", user);
+			} else {
+				throw new Exception();
+			}
 
 			return "success";
 		} else {
-			System.out.println("error");
 			return "error";
 		}
-
 	}
 
 

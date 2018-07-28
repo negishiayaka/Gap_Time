@@ -2,13 +2,14 @@ package com.internousdev.gap_time.action;
 
 import com.internousdev.gap_time.dao.UserDAO;
 import com.internousdev.gap_time.dto.UserDTO;
+import com.internousdev.gap_time.util.UserUtil;
 
 public class LoginAction extends BaseAction {
 
 	private String loginId;
 	private String password;
 
-	public String execute(){
+	public String execute() throws Exception {
 
 		clearError();
 
@@ -28,6 +29,9 @@ public class LoginAction extends BaseAction {
 				UserDTO user = dao.select(loginId, password);
 				session.put("user", user);
 
+				if (!UserUtil.existsPhoto(user.getId())){
+					UserUtil.copyDefaultPhoto(user.getId());
+				}
 			}else{
 				putError("login", "ログインに失敗しました");
 			}

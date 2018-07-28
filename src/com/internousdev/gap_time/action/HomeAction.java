@@ -26,8 +26,6 @@ public class HomeAction extends BaseAction {
 				throw new Exception();
 			}
 
-
-			////////編集っちゅう
 			TweetUtil.select(profile.getId(), session);
 
 		}else{
