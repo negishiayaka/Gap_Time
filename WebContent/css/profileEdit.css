@@ -1,0 +1,112 @@
+@CHARSET "UTF-8";
+
+body{
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+}
+/*ボックス全体*/
+.box_all{
+	width:300px;
+	height:auto;
+	background-color: #fff;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-bottom: 30px;
+
+}
+/*ボックス中*/
+.box{
+	width: 250px;
+	height: auto;
+	background-color: #F2F2F2;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+/*H1デザイン*/
+.edit_title {
+	position: relative;
+	display: inline-block;
+	padding: 0 2.5em;
+	text-align: center;
+	color: #585858;
+	margin-top: 10px;
+	font-size: 20px;
+	margin-left: 40px;
+	margin-bottom: 10px;
+}
+.edit_title:before, .edit_title:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	width: 15%;
+	height: 2px;
+	background-color: #9F81F7;
+}
+.edit_title:before {
+	left: 0;
+}
+.edit_title:after {
+	right: 0;
+}
+/*アカウント名タイトル*/
+.edit_subtitle{
+	font-size: 15px;
+	color: #848484;
+	font-weight:bold;
+	text-align: center;
+	padding-top: 20px;
+}
+/*名前入力欄*/
+.name_field{
+	width: 100px;
+	height: 11px;
+}
+/*画像タイトル*/
+.edit_subtitle2{
+	font-size: 15px;
+	color: #848484;
+	font-weight:bold;
+	text-align: center;
+	padding-top: 20px;
+}
+.image_btn{
+	margin-left: 25px;
+	margin-top: 5px;
+}
+
+/*自己紹介タイトル*/
+.edit_subtitle3{
+	font-size: 15px;
+	color: #848484;
+	font-weight:bold;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 5px;
+}
+/*自己紹介文*/
+.text_field_box{
+	width: 200px;
+	height: 100px;
+	margin-left: 24px;
+
+}
+
+/*ボタン*/
+.update_btn {
+	width: 100px;
+	height: 35px;
+	color:#fff;
+	background-color: #9F81F7;
+	border-radius: 5px;
+	margin-top: 10px;
+	font-size: 18px;
+	margin-left: 75px;
+	margin-bottom: 20px;
+}
+.update_btn:hover {
+	background: #8258fa;
+}
