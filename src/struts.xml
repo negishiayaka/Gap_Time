@@ -7,10 +7,10 @@
 
 	<!-- 開発者モード(デバッグしたい時にはコメント外してください。ユーザーのエラーページが無効にできます) -->
 	<constant name="struts.devMode" value="true" />
-		<package name="com.internousdev.gap_time.action" extends="struts-default">
+	<package name="com.internousdev.gap_time.action" extends="struts-default">
 
 		<action name="IndexAction" class="com.internousdev.gap_time.action.IndexAction" method="execute">
-			<result name="success">toHome.jsp</result>
+			<result name="success" type="chain">HomeAction</result>
 			<result name="login">login.jsp</result>
 		</action>
 
@@ -29,7 +29,7 @@
 		</action>
 
 		<action name="LoginAction" class="com.internousdev.gap_time.action.LoginAction" method="execute">
-			<result name="success">toHome.jsp</result>
+			<result name="success" type="chain">HomeAction</result>
 			<result name="error">login.jsp</result>
 		</action>
 
@@ -68,6 +68,15 @@
 
 		<action name="FollowViewAction" class="com.internousdev.gap_time.action.FollowViewAction" method="execute">
 			<result name="success">followView.jsp</result>
+		</action>
+
+		<action name="FollowAction" class="com.internousdev.gap_time.action.FollowAction" method="execute">
+			<result name="success" type="chain">HomeAction</result>
+		</action>
+
+		<action name="DefollowAction" class="com.internousdev.gap_time.action.DefollowAction" method="execute">
+			<result name="home" type="chain">HomeAction</result>
+			<result name="follow" type="chain">FollowViewAction</result>
 		</action>
 
 	</package>

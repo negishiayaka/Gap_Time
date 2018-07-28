@@ -93,7 +93,7 @@ public class FollowDAO {
 
 		Connection connection = DBConnector.getConnection();
 
-		String sql = "INSERT INTO follows(user_id, content, created_at, updated_at) VALUES(?,?,now(),now())";
+		String sql = "INSERT INTO follows(user_id, target_user_id, created_at, updated_at) VALUES(?,?,now(),now())";
 
 		boolean result = false;
 
@@ -125,7 +125,7 @@ public class FollowDAO {
 
 		Connection connection = DBConnector.getConnection();
 
-		String sql = "";
+		String sql = "DELETE FROM follows WHERE user_id = ? AND target_user_id = ?";
 
 		boolean result = false;
 

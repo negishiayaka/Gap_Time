@@ -26,8 +26,13 @@ public class HomeAction extends BaseAction {
 				throw new Exception();
 			}
 
+
+			////////編集っちゅう
+			TweetUtil.select(profile.getId(), session);
+
 		}else{
 			profile = user;
+			TweetUtil.select(profile.getId(), session);
 		}
 
 		boolean isUser = user.getId() == profile.getId();
@@ -41,7 +46,6 @@ public class HomeAction extends BaseAction {
 		System.out.println(isFollowing);
 
 
-		TweetUtil.select(profile.getId(), session);
 
 		return "success";
 	}
