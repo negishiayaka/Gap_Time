@@ -34,7 +34,7 @@
 		</ul>
 	</s:form>
 	<!-- 新規登録へのリンク -->
-	<p><a href="SignupAction">アカウント作成</a></p>
+	<p><a href="SignupAction">Create an account</a></p>
 
 </body>
 </html>

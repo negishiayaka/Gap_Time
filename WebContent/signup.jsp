@@ -14,13 +14,13 @@
 
 	<s:form action="SignupConfirmAction">
 		<ul class="fieldbox">
-			<li><div class="fieldboxtext">アカウントを作成</div></li>
+			<li><div class="fieldboxtext">Create an account</div></li>
 			<!-- ID -->
 			<li><div class="idtextfield">
 					<dl>
 						<dt>
 							<s:textfield class="signuptextfield" name="loginId"
-								placeholder="ID" value="%{#session.signupDto.loginId}" />
+								placeholder="Id" value="%{#session.signupDto.loginId}" />
 						</dt>
 						<!-- エラー表示 -->
 						<s:if test="%{#session.error.containsKey('loginId')}">
@@ -39,7 +39,7 @@
 					<dl>
 						<dt>
 							<s:textfield class="signuptextfield" name="password"
-								placeholder="パスワード" value="%{#session.signupDto.password}" />
+								placeholder="Password" value="%{#session.signupDto.password}" />
 						</dt>
 						<!-- エラー表示 -->
 						<s:if test="%{#session.error.containsKey('password')}">
@@ -58,7 +58,7 @@
 					<dl>
 						<dt>
 							<s:textfield class="signuptextfield" name="name"
-								placeholder="表示名（アカウント名）" value="%{#session.signupDto.name}" />
+								placeholder="Name" value="%{#session.signupDto.name}" />
 						</dt>
 						<!-- エラー表示 -->
 						<s:if test="%{#session.error.containsKey('name')}">
@@ -74,7 +74,7 @@
 				</div></li>
 			<!-- サブミットボタン -->
 			<li><div class="btn_all">
-					<s:submit value="確認" class="submit_btn" />
+					<s:submit value="Confirm" class="submit_btn" />
 				</div></li>
 		</ul>
 	</s:form>

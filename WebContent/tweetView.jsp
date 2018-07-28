@@ -5,7 +5,7 @@
 <!-- タイトル -->
 	<h1 class="content_name">Tweet Content</h1>
 	<!-- 背景ベース -->
-	<div>
+	<div class="background">
 		<!-- insideベース -->
 		<ul class="content_small_box">
 			<s:iterator value="%{#session.tweets}">

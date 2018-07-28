@@ -24,15 +24,16 @@
 	#profile {
 		float: left;
 		width: 250px;
-		height: 530px;
+		height: auto;
 		background-color: #fff;
 		margin-top: 20px;
+		padding-bottom: 20px;
 	}
 /*ツイート一覧側*/
 	#tweet {
 		float: left;
 		width: 530px;
-		height: 1000px;
+		height: auto;
 		background-color: #fff;
 		margin-top: 20px;
 		margin-left: 20px;

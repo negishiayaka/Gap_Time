@@ -12,21 +12,21 @@
 </head>
 <body>
 	<div class="confirmbox">
-		<div class="confirmboxtext">こちらの内容でよろしいですか？</div>
+		<div class="confirmboxtext">Is this fine with you？</div>
 		<ul class="confirmbox2">
 
 			<li>
-				<div class="confirmtitle"><p>ログインID</p></div>
+				<div class="confirmtitle"><p>Login ID</p></div>
 			</li>
 			<li><div class="confirmname">
 					<s:property value="%{#session.signupDto.loginId}" />
 				</div></li>
 
-			<li><div class="confirmtitle"><p>パスワード</p></div></li>
+			<li><div class="confirmtitle"><p>Password</p></div></li>
 			<li><div class="confirmname">
 					<s:property value="%{#session.signupDto.password}" />
 				</div></li>
-			<li><div class="confirmtitle"><p>表示名</p></div></li>
+			<li><div class="confirmtitle"><p>Account Name</p></div></li>
 			<li><div class="confirmname">
 					<s:property value="%{#session.signupDto.name}" />
 				</div></li>
