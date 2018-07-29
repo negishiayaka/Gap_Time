@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="./css/header.css">
 <link rel="stylesheet" href="./css/followView.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>twitter demo</title>
+<title>Gap_Time</title>
 </head>
 <body>
 
@@ -18,16 +18,16 @@
 		<div class="small_box_follow">
 
 			<ul>
-				<s:iterator value="#session.follows">
+				<s:iterator value="%{#session.follows}">
 					<li class="list_box_follow">
 					<a  class="font" href="<s:url action='HomeAction'>
-							<s:param name='userId' value='id' />
+							<s:param name='userId' value='%{id}' />
 						</s:url>">
 							<s:property value="name" />
 					</a>
 
 							<s:form action="DefollowAction">
-								<s:hidden name="userId" value="id"/>
+								<s:hidden name="userId" value="%{id}"/>
 								<s:submit value="Unfollow" class="unfollow_btn" />
 							</s:form>
 						</li>

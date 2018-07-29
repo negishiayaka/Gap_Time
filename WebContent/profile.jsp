@@ -8,7 +8,6 @@
 </head>
 
 <body>
-
 	<h1 class="profile_name">Profile</h1>
 	<div>
 		<ul class="profile_img">
@@ -26,7 +25,7 @@
 				<!-- 表示しているプロフィールがログインしているユーザーか -->
 				<s:if test="%{#session.isFollowing}">
 					<!-- フォローしているか -->
-					<li><a
+					<li ><a
 						href='<s:url action="DefollowAction"><s:param name="userId" value="%{#session.profile.id}"/></s:url>'>
 							フォロー解除 </a></li>
 				</s:if>
@@ -45,7 +44,10 @@
 
 		<s:if test="%{#session.isUser}">
             <li>
-                <a href="GoProfileEditAction">プロフィール編集</a>
+            	<s:form action="GoProfileEditAction">
+            		<s:submit value="Edit" class="edit_btn" />
+            	</s:form>
+
             </li>
         </s:if>
 
