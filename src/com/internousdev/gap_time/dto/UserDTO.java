@@ -1,6 +1,8 @@
 package com.internousdev.gap_time.dto;
 
 import java.sql.Date;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class UserDTO {
 
@@ -53,7 +55,6 @@ public class UserDTO {
 		this.introductions = introductions;
 	}
 
-
 	public int getLogined() {
 		return logined;
 	}
@@ -76,5 +77,22 @@ public class UserDTO {
 
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+
+	public String getPhotoPath() {
+		return "./images/users/" + id + "/photo.png";
+	}
+
+	public static UserDTO parseDto(ResultSet resultSet) throws SQLException {
+		UserDTO result = new UserDTO();
+		result.setId(resultSet.getInt("id"));
+		result.setLoginId(resultSet.getString("login_id"));
+		result.setPassword(resultSet.getString("password"));
+		result.setName(resultSet.getString("name"));
+		result.setIntroductions(resultSet.getString("introductions"));
+		result.setLogined(resultSet.getInt("logined"));
+		result.setCreatedAt(resultSet.getDate("created_at"));
+		result.setUpdatedAt(resultSet.getDate("updated_at"));
+		return result;
 	}
 }
