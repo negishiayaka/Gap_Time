@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+/*ベース背景*/
+.background{
+	width:350px;
+	height:auto;
+	margin-top:20px;
+	background-color: #fff;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-bottom: 40px;
+}
+li{
+	list-style: none;
+}
+
+.small_box{
+	width: 300px;
+	height: auto;
+	background-color: #F2F2F2;
+	margin: 0 auto;
+	border-radius: 5px;
+	padding-bottom: 15px;
+	padding-top: 5px;
+}
+
+/*H1デザイン*/
+.list_name {
+	position: relative;
+	display: inline-block;
+	padding: 0 2.5em;
+	text-align: center;
+	color: #585858;
+	margin-top: 20px;
+	font-size: 20px;
+	margin-left: 43px;
+	margin-bottom: 20px;
+}
+.list_name:before, .list_name:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	width: 13%;
+	height: 2px;
+	background-color: #9F81F7;
+}
+.list_name:before {
+	left: 0;
+}
+.list_name:after {
+	right: 0;
+}
+/*一覧結果*/
+.list_box{
+	width:200px;
+	margin:0 auto;
+	background-color: #fff;
+	padding: 5px;
+	margin-top: 10px;
+	text-align: center;
+}

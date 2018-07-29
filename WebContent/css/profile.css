@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-ul {
+li {
 	list-style: none;
 }
 /*H1デザイン*/
@@ -78,3 +78,23 @@ ul {
 	padding-top: 15px;
 }
 
+/*ボタン装飾*/
+.edit_btn {
+	width: 100%;
+	height: 100%;
+	font-size: 17px;
+	background-color: #bca9f5;
+	border: none;
+	cursor: pointer;
+	letter-spacing: 0.05em;
+	text-align: center;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	letter-spacing: 0.05em;
+	text-align: center;
+}
+
+.submit_btn:hover {
+	background: #8258fa;
+}

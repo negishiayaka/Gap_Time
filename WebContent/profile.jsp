@@ -27,12 +27,12 @@
 				<s:if test="%{#session.isFollowing}">
 					<!-- フォローしているか -->
 					<li><a
-						href='<s:url action="DefollowAction"><s:param name="userId" value="%{id}"/></s:url>'>
+						href='<s:url action="DefollowAction"><s:param name="userId" value="%{#session.profile.id}"/></s:url>'>
 							フォロー解除 </a></li>
 				</s:if>
 				<s:else>
 					<li><a
-						href='<s:url action="FollowAction"><s:param name="userId" value="%{id}"/></s:url>'>
+						href='<s:url action="FollowAction"><s:param name="userId" value="%{#session.profile.id}"/></s:url>'>
 							フォローする </a></li>
 				</s:else>
 			</s:if>
@@ -43,7 +43,11 @@
 					value="%{#session.profile.introductions}" /></li>
 		</ul>
 
-		<a href="GoProfileEditAction">プロフィール編集</a>
+		<s:if test="%{#session.isUser}">
+            <li>
+                <a href="GoProfileEditAction">プロフィール編集</a>
+            </li>
+        </s:if>
 
 	</div>
 </body>
