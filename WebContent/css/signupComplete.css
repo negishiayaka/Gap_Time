@@ -5,11 +5,13 @@ body {
 }
 /*フォームレイアウト*/
 .fieldbox {
-	height: 200px;
+	height: auto;
 	width: 400px;
 	background: #fafafa;
 	margin: 0 auto;
-	padding: 0;
+	padding-bottom: 30px;
+	border-radius: 10px;
+	margin-top: 20px;
 }
 
 /*文字*/

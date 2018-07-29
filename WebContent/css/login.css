@@ -5,11 +5,11 @@ body {
 }
 /*フォームレイアウト*/
 .fieldbox {
-	height: 400px;
+	height: auto;
 	width: 300px;
 	background: #fafafa;
 	margin: 0 auto;
-	padding: 0;
+	padding-bottom: 50px;
 }
 /*文字*/
 /*ログイン　文字*/
@@ -88,5 +88,13 @@ li {
 p {
 	text-align: center;
 	margin-top: 10px;
+}
+
+/*エラーメッセージ*/
+.error-message{
+color: red;
+font-size:12px;
+margin-left: 10px;
+text-align: center;
 }
 

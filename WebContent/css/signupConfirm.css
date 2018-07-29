@@ -10,11 +10,11 @@ li {
 
 /*フォームレイアウト*/
 .confirmbox {
-	height: 430px;
+	height: auto;
 	width: 400px;
 	background: #fafafa;
 	margin: 0 auto;
-	padding: 0;
+	padding-bottom: 35px;
 }
 
 /*文字*/

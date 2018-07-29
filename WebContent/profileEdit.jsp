@@ -21,6 +21,9 @@
 						<s:textfield class="name_field" name="name" value="%{#session.user.name}" />
 					</li>
 
+					<li>
+						<img src="<s:property value='%{#session.user.photoPath}' />" />
+					</li>
 					<li class="edit_subtitle2">Image</li>
 
 					<li class="image_btn">

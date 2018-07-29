@@ -16,11 +16,25 @@
 }
 /*ボタン*/
 .tweet_btn {
+	width: 45px;
+	height: 45px;
+	margin-left: 5px;
+	margin-top: 5px;
+
+}
+/*ボタン背景*/
+.tweet_back{
 	width: 55px;
 	height: 54px;
 	background-color: #9F81F7;
 	border-radius: 5px;
 	margin-top: 10px;
-	font-size: 18px;
-	color: #848484;
+	float: right;
+	margin-top: 19px;
+	margin-right: 15px;
+}
+
+/*floatの解除*/
+.clear {
+	clear: both;
 }

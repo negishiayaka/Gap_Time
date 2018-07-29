@@ -34,7 +34,7 @@
 
 		<s:form action="SignupCompleteAction">
 			<div class="btn_all">
-				<s:submit value="登録する" class="submit_btn" />
+				<s:submit value="Confirm" class="submit_btn" />
 			</div>
 		</s:form>
 	</div>
