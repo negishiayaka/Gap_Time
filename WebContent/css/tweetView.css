@@ -51,7 +51,7 @@
 /*ツイート中身*/
 .content_box{
 	width:330px;
-	height:100px;
+	height:auto;
 	margin-left:50px;
 	background-color: #F2F2F2;
 	margin: 0 auto;
