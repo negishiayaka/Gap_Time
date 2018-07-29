@@ -59,11 +59,15 @@
 
 /*いいね画像*/
 .like_btn img{
-	width:20px;
+	/* width:20px; */
 	height:16px;
 	margin-top: 5px;
-	margin-left: 10px;
+	/* margin-left: 10px; */
 }
+.like_btn img:hover {
+	background: #8258fa;
+}
+
 /*いいねボックス*/
 .like_btn{
 	width: 60px;

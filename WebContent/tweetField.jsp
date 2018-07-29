@@ -10,7 +10,7 @@
 <body>
 	<div>
 		<s:form action="TweetAction">
-			<s:textfield class="tweet_box" name="message"
+			<s:textarea class="tweet_box" name="message"
 				placeholder="What's happening？" />
 			<div class="tweet_back">
 				<s:submit class="tweet_btn" type="image" src="images/tweet.png" />

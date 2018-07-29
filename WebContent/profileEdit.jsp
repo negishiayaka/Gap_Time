@@ -15,16 +15,18 @@
 	<div class="box_all">
 		<h1 class="edit_title">Profile Edit</h1>
 		<div class="box">
-			<s:form action="ProfileEditAction">
+			<s:form action="ProfileEditAction" method="post" enctype="multipart/form-data">
 				<ul>
 					<li class="edit_subtitle">Name
 						<s:textfield class="name_field" name="name" value="%{#session.user.name}" />
 					</li>
 
-					<li>
+					<li class="edit_subtitle2">Image</li>
+
+					<li class="image">
 						<img src="<s:property value='%{#session.user.photoPath}' />" />
 					</li>
-					<li class="edit_subtitle2">Image</li>
+
 
 					<li class="image_btn">
 						<s:file name="photo" />

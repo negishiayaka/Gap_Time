@@ -8,11 +8,13 @@
 	margin-left:15px;
 	border-radius: 5px;
 	font-size: 18px;
+	resize: none;
 }
 /*ツイート入力ボックスの中*/
 .tweet_box::-webkit-input-placeholder {
 	color: #bdbdbd;
 	font-size: 18px;
+	line-height: 50px;
 }
 /*ボタン*/
 .tweet_btn {
@@ -32,6 +34,11 @@
 	float: right;
 	margin-top: 19px;
 	margin-right: 15px;
+}
+
+.tweet_back:hover {
+	/* background: #8258fa; */
+	opacity: 0.5 ;
 }
 
 /*floatの解除*/

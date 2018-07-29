@@ -19,7 +19,7 @@
 					<li class="content_field">
 						<ul>
 							<li class="name_box"><s:property value="name" /></li>
-							<li class="content_box"><s:property value="content" /></li>
+							<li class="content_box"><s:property value="content" escape="false"/></li>
 							<!-- いいねボタン -->
 							<li class="like_btn"><a
 								href='<s:url action="LikeAction"><s:param name="tweetId" value="%{id}"/></s:url>'>
