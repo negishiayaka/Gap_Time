@@ -32,7 +32,6 @@ insert into users(login_id, password, name, created_at, updated_at) values
 update users set introductions = "とら/ポメラニアン /男の子/2016年5月25日生まれ/2歳/4.6キロ/人が大好き！/東京住み/ペット介護士取得" where id = 2;
 update users set introductions = "とら/ポメラニアン /男の子/2016年5月25日生まれ/2歳/4.6キロ/人が大好き！/東京住み/ペット介護士取得/とらの日時をつぶやきます！/東京で定期的にポメ会開催中！" where id = 2;
 
-
 -- ツイート
 create table tweets(
 	id int primary key not null auto_increment comment "ID",
@@ -68,3 +67,4 @@ insert into follows values
 (2, 2, 4, now(), now()),
 (3, 3, 2, now(), now()),
 (4, 4, 2, now(), now());
+
