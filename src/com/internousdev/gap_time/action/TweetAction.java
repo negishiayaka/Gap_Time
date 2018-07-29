@@ -21,7 +21,7 @@ public class TweetAction extends BaseAction {
 			putError("tweet", "1文字から200文字で入力してください。");
 		}
 
-		message = htmlEscape(message);
+		message = InputChecker.htmlEscape(message);
 
 		if (isError()){
 			return "error";
@@ -40,42 +40,4 @@ public class TweetAction extends BaseAction {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-
-	public static String htmlEscape(String text) {
-        StringBuffer sb=new StringBuffer();
-        for(int i=0;i<text.length();i++){
-            switch(text.charAt(i)){
-                //HTMLタグの無効化（&"<>）
-                case '&' :
-                    sb.append("&amp;");
-                    break;
-                case '<' :
-                    sb.append("&lt;");
-                    break;
-                case '>' :
-                    sb.append("&gt;");
-                    break;
-                case '"' :
-                    sb.append("&quot;");
-                    break;
-                case '\\' :
-                    sb.append("&yen;");
-                    break;
-                //スペースの変換（半角スペース → &nbsp;）
-                case ' ' :
-                    sb.append("&nbsp;");
-                    break;
-                //タブの変換（\t → &nbsp;&nbsp;&nbsp;&nbsp;）
-                case '\t' :
-                    sb.append("&nbsp;&nbsp;&nbsp;&nbsp;");
-                    break;
-                default :
-                    sb.append(text.charAt(i));
-                break;
-            }
-        }
-        //改行コードの変換（\r\n,\r,\n → <br>）
-        return sb.toString().replaceAll("(\r\n|\r|\n)", "<br/>");
-    }
-
 }
