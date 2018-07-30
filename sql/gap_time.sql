@@ -18,38 +18,29 @@ create table users(
 	updated_at datetime not null comment "更新日"
 );
 
-insert into users(login_id, password, name, created_at, updated_at) values
-("guest", "guest", "ゲスト",  now(), now()),
-("a", "a", "あああああ", now(), now()),
-("b", "b", "ああああい", now(), now()),
-("c", "c", "あああいい", now(), now()),
-("d", "d", "ああいいい", now(), now()),
-("e", "e", "あいいいい", now(), now()),
-("f", "f", "いいいいい", now(), now()),
-("g", "g", "あいうえお", now(), now()),
-("h", "h", "かきくけこ", now(), now());
-
-update users set introductions = "とら/ポメラニアン /男の子/2016年5月25日生まれ/2歳/4.6キロ/人が大好き！/東京住み/ペット介護士取得" where id = 2;
-update users set introductions = "とら/ポメラニアン /男の子/2016年5月25日生まれ/2歳/4.6キロ/人が大好き！/東京住み/ペット介護士取得/とらの日時をつぶやきます！/東京で定期的にポメ会開催中！" where id = 2;
+insert into users(login_id, password, name, introductions, created_at, updated_at) values
+("guest", "guest", "ゲスト", "紹介文", now(), now()),
+("guest1", "guest1", "ゲスト1", "紹介文1", now(), now()),
+("guest2", "guest2", "ゲスト2", "紹介文2", now(), now());
 
 -- ツイート
 create table tweets(
 	id int primary key not null auto_increment comment "ID",
 	user_id int not null comment "ユーザーID",
-	content varchar(140) not null comment "内容",
+	content varchar(255) not null comment "内容",
 	like_count int not null default 0 comment "いいねの数",
 	created_at datetime not null comment "作成日",
 	updated_at datetime not null comment "更新日",
 	foreign key(user_id) references users(id)
 );
 
-insert into tweets values
-(1, 2, "content1", 0, now(), now()),
-(2, 2, "content2", 0, now(), now()),
-(3, 3, "content3", 0, now(), now()),
-(4, 3, "content4", 0, now(), now()),
-(5, 4, "content5", 0, now(), now()),
-(6, 4, "content6", 0, now(), now());
+insert into tweets(user_id, content, created_at, updated_at) values
+(1, "content1", now(), now()),
+(1, "content2", now(), now()),
+(2, "content3", now(), now()),
+(2, "content4", now(), now()),
+(3, "content5", now(), now()),
+(3, "content6", now(), now());
 
 -- フォロー
 create table follows(
@@ -62,9 +53,7 @@ create table follows(
 	foreign key(target_user_id) references users(id)
 );
 
-insert into follows values
-(1, 2, 3, now(), now()),
-(2, 2, 4, now(), now()),
-(3, 3, 2, now(), now()),
-(4, 4, 2, now(), now());
-
+insert into follows(user_id, target_user_id, created_at, updated_at) values
+(1, 2, now(), now()),
+(1, 3, now(), now()),
+(2, 1, now(), now());
