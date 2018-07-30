@@ -114,13 +114,13 @@ li {
 
 /*ボタン装飾*/
 .f_btn {
-	width: 130px;
-	height: 30px;
+	width: 100px;
+	height: 25px;
 	font-size: 17px;
 	background-color: #9F81F7;
 	text-align: center;
 	margin-top: 10px;
-	margin-left: 55px;
+	margin-left: 75px;
 	border-radius: 5px;
 	color: #fff;
 }

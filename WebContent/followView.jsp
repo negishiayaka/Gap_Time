@@ -17,22 +17,28 @@
 		<h1 class="list_name_follow">Follow List</h1>
 		<div class="small_box_follow">
 
-			<ul>
-				<s:iterator value="%{#session.follows}">
-					<li class="list_box_follow">
-					<a  class="font" href="<s:url action='HomeAction'>
-							<s:param name='userId' value='%{id}' />
-						</s:url>">
-							<s:property value="name" />
-					</a>
+			<s:if test="%{#session.follows.isEmpty()}">
+				follow0
+			</s:if>
+			<s:else>
 
-							<s:form action="DefollowAction">
-								<s:hidden name="userId" value="%{id}"/>
-								<s:submit value="Unfollow" class="unfollow_btn" />
-							</s:form>
-						</li>
-				</s:iterator>
-			</ul>
+				<ul>
+					<s:iterator value="%{#session.follows}">
+						<li class="list_box_follow">
+						<a  class="font" href="<s:url action='HomeAction'>
+								<s:param name='userId' value='%{id}' />
+							</s:url>">
+								<s:property value="name" />
+						</a>
+
+								<s:form action="DefollowAction">
+									<s:hidden name="userId" value="%{id}"/>
+									<s:submit value="Unfollow" class="unfollow_btn" />
+								</s:form>
+							</li>
+					</s:iterator>
+				</ul>
+			</s:else>
 		</div>
 	</div>
 </body>

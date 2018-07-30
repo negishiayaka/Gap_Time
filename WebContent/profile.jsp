@@ -32,14 +32,14 @@
 					<li>
 						<s:form action="DefollowAction">
 							<s:hidden name="userId" value="%{#session.profile.id}" />
-							<s:submit value="フォロー解除" class="f_btn"/>
+							<s:submit value="Unfollow" class="f_btn"/>
 						</s:form>
 				</s:if>
 				<s:else>
 					<li>
 						<s:form action="FollowAction">
 							<s:hidden name="userId" value="%{#session.profile.id}" />
-							<s:submit value="フォロー" class="f_btn"/>
+							<s:submit value="Follow" class="f_btn"/>
 						</s:form>
 				</s:else>
 			</s:if>
