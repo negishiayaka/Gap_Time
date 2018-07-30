@@ -22,9 +22,9 @@ insert into users(login_id, password, name, introductions, created_at, updated_a
 ("guest", "guest", "ゲスト", "紹介文", now(), now()),
 ("negishi", "ayaka", "NegishiAyaka", "プログラム大好き女子！空いている時間は全部プログラムの勉強してます！デザインにも興味津々！", now(), now()),
 ("endo", "takahiro", "EndoTakahiro", "ゲームプログラマー、使用可能言語・C＃、C言語、Java、JavaScript、PHP、C++、VBA、BASIC、HTML、CSS", now(), now()),
-("nakayama", "eri", "nakayamaeri", "デザイン担当女子！いつもニコニコしてて、何を言っても笑っちゃいます！ツボが浅いことが取り柄！", now(), now()),
-("yokoyama", "takahiro", "yokoyamatakahiro", "最近ブラックな一面が出てしまうことが悩み・・・", now(), now()),
-("kubota", "kyosuke", "kubotakyosuke", "自分は、お父さん的な存在です！チーム制作でもリーダーに抜擢されました！", now(), now());
+("nakayama", "eri", "NakayamaEri", "デザイン担当女子！いつもニコニコしてて、何を言っても笑っちゃいます！ツボが浅いことが取り柄！", now(), now()),
+("yokoyama", "takahiro", "YokoyamaTakahiro", "最近ブラックな一面が出てしまうことが悩み・・・", now(), now()),
+("kubota", "kyosuke", "KubotaKyosuke", "自分は、お父さん的な存在です！チーム制作でもリーダーに抜擢されました！", now(), now());
 
 
 
