@@ -3,6 +3,7 @@ package com.internousdev.gap_time.action;
 import com.internousdev.gap_time.dao.SignupDAO;
 import com.internousdev.gap_time.dto.SignupDTO;
 import com.internousdev.gap_time.util.InputChecker;
+import com.internousdev.gap_time.util.RegexDesc;
 
 public class SignupConfirmAction extends BaseAction {
 
@@ -10,7 +11,7 @@ public class SignupConfirmAction extends BaseAction {
 	private String password;
 	private String name;
 
-	public String execute(){
+	public String execute() throws Exception {
 
 		clearError();
 
@@ -26,13 +27,20 @@ public class SignupConfirmAction extends BaseAction {
 					putError("loginId", "既に使用されているIDです");
 				}
 			}
+			if (!InputChecker.regex(loginId, RegexDesc.format(RegexDesc.LOGIN_ID))){
+				putError("loginId", "半角英数字で入力してください");
+			}
 		}
+
 
 		if (password == null || password.equals("")){
 			putError("password", "入力してください");
 		}else{
 			if (!InputChecker.length(password, 1, 16)){
 				putError("password", "1文字から16文字で入力してください");
+			}
+			if (!InputChecker.regex(password, RegexDesc.format(RegexDesc.PASSWORD))){
+				putError("password", "半角英数字で入力してください");
 			}
 		}
 
@@ -41,6 +49,9 @@ public class SignupConfirmAction extends BaseAction {
 		}else{
 			if (!InputChecker.length(name, 1, 16)){
 				putError("name", "1文字から16文字で入力してください");
+			}
+			if (!InputChecker.regex(name, RegexDesc.format(RegexDesc.NAME))){
+				putError("name", "使用不可文字が含まれています");
 			}
 		}
 
