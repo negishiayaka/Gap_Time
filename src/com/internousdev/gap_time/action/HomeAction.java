@@ -1,5 +1,7 @@
 package com.internousdev.gap_time.action;
 
+import java.util.List;
+
 import com.internousdev.gap_time.dao.FollowDAO;
 import com.internousdev.gap_time.dao.UserDAO;
 import com.internousdev.gap_time.dto.UserDTO;
@@ -30,7 +32,10 @@ public class HomeAction extends BaseAction {
 
 		}else{
 			profile = user;
-			TweetUtil.select(profile.getId(), session);
+			FollowDAO followDao = new FollowDAO();
+			List<Integer> list = followDao.select(user.getId());	// フォローしている人のIDを取得
+			list.add(user.getId());		// 自身のIDを追加
+			TweetUtil.select(list, session);
 		}
 
 		boolean isUser = user.getId() == profile.getId();
@@ -42,8 +47,6 @@ public class HomeAction extends BaseAction {
 		System.out.println(user.getName());
 		System.out.println(profile.getName());
 		System.out.println(isFollowing);
-
-
 
 		return "success";
 	}
