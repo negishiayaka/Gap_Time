@@ -24,7 +24,9 @@
 					<li class="edit_subtitle2">Image</li>
 
 					<li class="image">
+						<div class="image_box">
 						<img src="<s:property value='%{#session.user.photoPath}' />" />
+						</div>
 					</li>
 
 

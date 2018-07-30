@@ -14,22 +14,29 @@
 		<!-- 背景ベース -->
 		<div class="background">
 			<!-- insideベース -->
-			<ul class="content_small_box">
-				<s:iterator value="%{#session.tweets}">
-					<li class="content_field">
-						<ul>
-							<li class="name_box"><s:property value="name" /></li>
-							<li class="content_box"><s:property value="content" escape="false"/></li>
-							<!-- いいねボタン -->
-							<li class="like_btn"><a
-								href='<s:url action="LikeAction"><s:param name="tweetId" value="%{id}"/></s:url>'>
-									<img src="images/like_btn.png">
-							</a> <s:property value="likeCount" /></li>
-						</ul>
-					</li>
-				</s:iterator>
+			<s:if test="%{#session.tweets.isEmpty()}">
+				follow0
+			</s:if>
+			<s:else>
+				<ul class="content_small_box">
+					<s:iterator value="%{#session.tweets}">
+						<li class="content_field">
+							<ul>
+								<li class="name_box"><s:property value="name" /></li>
+								<li class="content_box"><s:property value="content" escape="false"/></li>
+								<!-- いいねボタン -->
+								<li class="like_btn">
 
-			</ul>
+								<a
+									href='<s:url action="LikeAction"><s:param name="tweetId" value="%{id}"/></s:url>'>
+										<img src="images/like_btn.png">
+								</a> <s:property value="likeCount" /></li>
+							</ul>
+						</li>
+					</s:iterator>
+
+				</ul>
+			</s:else>
 		</div>
 	</div>
 </body>
