@@ -40,7 +40,7 @@ body{
 	font-weight: bold;
 }
 /*メニューhover時*/
-li a:hover:not(.active) {
+header li a:hover:not(.active) {
 background-color: #E3CEF6;
 }
 /*ログアウトボタン側*/

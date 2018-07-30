@@ -31,13 +31,30 @@ li {
 }
 
 /*プロフィール画像*/
+/* .profile_img  img {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;これで真ん中にしたい
+	margin-left:25px;
+	margin-top: 10px;
+	border-radius: 100%; */
+}
+.profile_img{
+	width: 200px;
+}
+
 .profile_img  img {
 	width: 200px;
 	height: 200px;
-	/* margin: 0 auto;これで真ん中にしたい */
-	margin-left:25px;
-	margin-top: 10px;
+
 	border-radius: 100%;
+}
+
+.profile_img_box{
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+	margin-top:10px;
 }
 /*アカウント中央へ*/
 .account_all{
@@ -92,5 +109,22 @@ li {
 }
 
 .edit_btn {
+	background: #8258fa;
+}
+
+/*ボタン装飾*/
+.f_btn {
+	width: 130px;
+	height: 30px;
+	font-size: 17px;
+	background-color: #9F81F7;
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 55px;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.f_btn {
 	background: #8258fa;
 }

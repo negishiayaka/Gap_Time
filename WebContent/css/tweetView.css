@@ -68,8 +68,14 @@
 	background: #8258fa;
 }
 
+
+
 /*いいねボックス*/
 .like_btn{
 	width: 60px;
 	height: 25px;
+}
+
+.like_btn a{
+	text-decoration: none;
 }
