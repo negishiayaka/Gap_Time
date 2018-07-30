@@ -4,6 +4,8 @@ import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.internousdev.gap_time.util.InputChecker;
+
 public class UserDTO {
 
 	private int id;						// ID
@@ -49,6 +51,10 @@ public class UserDTO {
 
 	public String getIntroductions() {
 		return introductions;
+	}
+
+	public String getEscapeIntroductions() {
+		return InputChecker.htmlEscape(introductions);
 	}
 
 	public void setIntroductions(String introductions) {

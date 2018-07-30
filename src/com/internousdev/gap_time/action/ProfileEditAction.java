@@ -21,14 +21,6 @@ public class ProfileEditAction extends BaseAction {
 
 	public String execute() throws Exception {
 
-		System.out.println("");
-		System.out.println("ProfileEdit");
-		System.out.println(name);
-		System.out.println(introductions);
-		System.out.println(photo);
-		System.out.println(photoContentType);
-		System.out.println(photoFileName);
-
 		UserDTO user = (UserDTO)session.get("user");
 
 		UserDAO dao = new UserDAO();
@@ -43,6 +35,9 @@ public class ProfileEditAction extends BaseAction {
 		if (!InputChecker.length(introductions, 1, 400)) {
 			putError("introductions", "1文字から400文字で入力してください");
 		}
+		if (!InputChecker.regex(introductions, RegexDesc.format(RegexDesc.CUSTOM1))){
+			putError("introductions", "使用不可文字が含まれています");
+		}
 
 		if (photo != null && !photoContentType.equals("image/png")) {
 			putError("photo", "pngファイルを選択してください");
@@ -53,8 +48,6 @@ public class ProfileEditAction extends BaseAction {
 			if (photo != null) {
 				UserUtil.uploadPhoto(user.getId(), photo);
 			}
-
-			introductions = InputChecker.htmlEscape(introductions);
 
 			if (dao.update(user.getId(), name, introductions)) {
 

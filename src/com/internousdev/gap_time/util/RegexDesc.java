@@ -107,6 +107,20 @@ public class RegexDesc {
 		this.custom = custom;
 	}
 
+	public void setFlagAll(boolean flag){
+		halfNumber = flag;
+		fullNumber = flag;
+		halfAlphabet = flag;
+		fullAlphabet = flag;
+		hiragana = flag;
+		katakana = flag;
+		kanji = flag;
+		halfSymbol = flag;
+		fullSymbol = flag;
+		halfSpace = flag;
+		fullSpace = flag;
+	}
+
 	public boolean is(){
 		return
 			halfNumber ||
@@ -126,6 +140,7 @@ public class RegexDesc {
 	public static final String LOGIN_ID = "loginId";
 	public static final String PASSWORD = "password";
 	public static final String NAME = "name";
+	public static final String CUSTOM1 = "custom1";
 
 	public static RegexDesc format(String format) throws Exception{
 
@@ -147,6 +162,10 @@ public class RegexDesc {
 			regex.setHiragana(true);
 			regex.setKatakana(true);
 			regex.setKanji(true);
+			break;
+		case CUSTOM1:
+			regex.setFlagAll(true);
+			regex.setCustom("\r\n");
 			break;
 		default:
 			regex = null;
