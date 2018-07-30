@@ -21,8 +21,10 @@
 		<ul class="account_all">
 			<li class="account_title">Name</li>
 			<li class="account_line"></li>
-			<li class="account_name"><s:property
-					value="%{#session.profile.name}" /></li>
+			<li class="account_name">
+				<a href='<s:url action="HomeAction"><s:param name="userId" value="%{#session.profile.id}"/></s:url>'>
+	<s:property value="%{#session.profile.name}" />
+</a></li>
 		</ul>
 		<ul>
 			<s:if test="%{!#session.isUser}">
