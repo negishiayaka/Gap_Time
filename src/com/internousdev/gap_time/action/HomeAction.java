@@ -13,6 +13,8 @@ public class HomeAction extends BaseAction {
 
 	public String execute() throws Exception {
 
+		clearError();
+
 		UserDTO user = (UserDTO)session.get("user");
 		UserDTO profile = null;
 		boolean isFollowing = false;
