@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="confirmbox">
-		<div class="confirmboxtext">Is this fine with you？</div>
+		<div class="confirmboxtext">Is it OK?</div>
 		<ul class="confirmbox2">
 
 			<li>
@@ -34,7 +34,7 @@
 
 		<s:form action="SignupCompleteAction">
 			<div class="btn_all">
-				<s:submit value="Confirm" class="submit_btn" />
+				<s:submit value="OK" class="submit_btn" />
 			</div>
 		</s:form>
 	</div>

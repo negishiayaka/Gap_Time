@@ -14,9 +14,11 @@
 		<!-- 背景ベース -->
 		<div class="background">
 			<!-- insideベース -->
+			<div class="tweet_count">
 			<s:if test="%{#session.tweets.isEmpty()}">
-				follow0
+				ツイートはありません。
 			</s:if>
+			</div>
 			<s:else>
 				<ul class="content_small_box">
 					<s:iterator value="%{#session.tweets}">

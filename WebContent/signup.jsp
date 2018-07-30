@@ -74,7 +74,7 @@
 				</div></li>
 			<!-- サブミットボタン -->
 			<li><div class="btn_all">
-					<s:submit value="Confirm" class="submit_btn" />
+					<s:submit value="OK" class="submit_btn" />
 				</div></li>
 		</ul>
 	</s:form>

@@ -49,7 +49,7 @@
 
 		<ul class="introductions_all">
 			<li class="introductions"><s:property
-					value="%{#session.profile.introductions}" /></li>
+					value="%{#session.profile.introductions}" escape="false"/></li>
 		</ul>
 
 		<s:if test="%{#session.isUser}">

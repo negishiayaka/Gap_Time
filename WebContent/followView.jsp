@@ -18,8 +18,10 @@
 		<div class="small_box_follow">
 
 			<s:if test="%{#session.follows.isEmpty()}">
-				follow0
+			<div class="follow_count">
+				フォローはしていません。</div>
 			</s:if>
+
 			<s:else>
 
 				<ul>

@@ -79,3 +79,9 @@
 .like_btn a{
 	text-decoration: none;
 }
+
+
+.tweet_count{
+	text-align: center;
+	font-size: 15px;
+}

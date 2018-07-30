@@ -127,3 +127,6 @@ ul {
 .update_btn:hover {
 	background: #8258fa;
 }
+textarea {
+	resize: none;
+}

@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="./css/tweetField.css">
 </head>
 <body>
+<s:if test="%{#session.user.id == #session.profile.id}">
 	<div>
 		<s:form action="TweetAction">
 			<s:textarea class="tweet_box" name="message"
@@ -17,7 +18,15 @@
 			</div>
 		</s:form>
 		<div class="clear"></div>
+		<!-- エラー表示 -->
+		<s:if test="%{#session.error.containsKey('tweet')}">
+			<s:iterator value="%{#session.error.tweet}">
+				<s:property /><br>
+			</s:iterator>
+		</s:if>
+
 
 	</div>
+	</s:if>
 </body>
 </html>

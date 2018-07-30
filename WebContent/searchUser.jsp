@@ -17,8 +17,9 @@
 		<h1 class="list_name">ユーザー検索結果</h1>
 		<div class="small_box">
 			<s:if test="%{#session.search.isEmpty()}">
-				<br>
-			検索結果はありません
+			<div class="user_search_box">
+
+			検索結果はありません</div>
 		</s:if>
 			<s:else>
 
