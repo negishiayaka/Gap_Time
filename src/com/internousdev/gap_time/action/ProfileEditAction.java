@@ -5,6 +5,7 @@ import java.io.File;
 import com.internousdev.gap_time.dao.UserDAO;
 import com.internousdev.gap_time.dto.UserDTO;
 import com.internousdev.gap_time.util.InputChecker;
+import com.internousdev.gap_time.util.RegexDesc;
 import com.internousdev.gap_time.util.UserUtil;
 
 public class ProfileEditAction extends BaseAction {
@@ -34,6 +35,9 @@ public class ProfileEditAction extends BaseAction {
 
 		if (!InputChecker.length(name, 1, 16)) {
 			putError("name", "1文字から16文字で入力してください");
+		}
+		if (!InputChecker.regex(name, RegexDesc.format(RegexDesc.NAME))){
+			putError("name", "使用不可文字が含まれています");
 		}
 
 		if (!InputChecker.length(introductions, 1, 400)) {
