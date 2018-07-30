@@ -32,11 +32,11 @@ public class ProfileEditAction extends BaseAction {
 
 		UserDAO dao = new UserDAO();
 
-		if (InputChecker.length(name, 1, 16)) {
+		if (!InputChecker.length(name, 1, 16)) {
 			putError("name", "1文字から16文字で入力してください");
 		}
 
-		if (InputChecker.length(introductions, 1, 400)) {
+		if (!InputChecker.length(introductions, 1, 400)) {
 			putError("introductions", "1文字から400文字で入力してください");
 		}
 
