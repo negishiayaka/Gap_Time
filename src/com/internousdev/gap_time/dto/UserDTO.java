@@ -3,6 +3,7 @@ package com.internousdev.gap_time.dto;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 
 import com.internousdev.gap_time.util.InputChecker;
 
@@ -86,7 +87,14 @@ public class UserDTO {
 	}
 
 	public String getPhotoPath() {
-		return "./images/users/" + id + "/photo.png";
+		return "./images/users/" + id + "/photo.png" + getCacheMeasures();
+	}
+
+	// キャッシュで画像が更新されなくなるのでphoto.pngのあとに付ける
+	private String getCacheMeasures(){
+		java.util.Date date = new java.util.Date();
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+		return "?" + simpleDateFormat.format(date);
 	}
 
 	public static UserDTO parseDto(ResultSet resultSet) throws SQLException {
