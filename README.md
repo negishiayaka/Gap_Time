@@ -3,11 +3,9 @@
 
 ### - Gap_Time/サイトURL（公開時間：平日10時 ～ 18時まで）  
 ##  http://www.internousdev.com/Gap_Time
-  
-### - Gap_Time！リポジトリ  
-##  https://github.com/negishiayaka/Gap_Time
+ 
 
-###各画面のデザイン一覧
+### - 各画面使用  
 ・ログイン画面
 ![default](https://user-images.githubusercontent.com/39142623/43434118-522e5e42-94b5-11e8-8df2-bdb56d61922e.png)
 
