@@ -42,7 +42,7 @@ public class ProfileEditAction extends BaseAction {
 		if (photo != null && !photoContentType.equals("image/png")) {
 			putError("photo", "pngファイルを選択してください");
 		}
-
+System.out.println(error.toString());
 		if (!isError()) {
 
 			if (photo != null) {
